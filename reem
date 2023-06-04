@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my test</title>
+
+    <style>
+            form {
+        display: flex;
+        flex-direction: column;
+        align-items:start;
+        margin-top: 50px;
+      }
+      label {
+        margin-bottom: 10px;
+      }
+      input {
+        padding: 5px;
+        margin-bottom: 20px;
+      }
+      button {
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0069d9;
+      }
+    </style>
+  </head>
+  <body>
+
+        <form>
+          <h1>Sign Up</h1>
+          <ul>
+            <li><label for="firstName">First Name:</label>
+              <input type="text" id="firstName" name="firstName"></li>
+            <li> <label for="lastName">Last Name:</label>
+              <input type="text" id="lastName" name="lastName"></li>
+            <li> <label>Organization</label>
+            <input type="text" placeholder="" /></li>
+            <li></li><label> Email Address</label>
+            <input type="email" placeholder="" /></li>
+            <li> <label>Work Phone</label>
+            <input type="text" placeholder="" /></li>
+            <li> <label>Home Phone</label>
+            <input type="text" placeholder="" /></li>
+            <li> <label>Cell Phone</label>
+            <input type="text" placeholder="" /></li>
+            <li> <label>Fax</label>
+            <input type="text" placeholder="" /></li>
+            <li> <label>Address 1</label>
+            <input type="text" placeholder="" /></li>
+            <li> <label>Address 2</label>
+            <input type="text" placeholder="" /></li>
+            <li> <label>City</label>
+            <input type="text" placeholder="" /></li>
+            <li> <label>State Province</label>
+            <input type="text" placeholder="" /></li>
+            <li> <label>Zip/ Postal Code</label>
+            <input type="text" placeholder="" /></li>
+            <li> <label>Country</label>
+            <input type="text" placeholder="" /></li>
+            </ul>
+              <button type="submit">submit</button>
+            <div id="congrate"></div>
+    <script>
+                  var form = document.querySelector('form');
+            var congrate = document.querySelector('#congrate');
+      
+            form.addEventListener('submit', (event) => {
+              event.preventDefault();
+              var firstName = document.querySelector('#firstName').value;
+              var lastName = document.querySelector('#lastName').value;
+              var greeting = `congratulations ${firstName} ${lastName}, you are now signed up!`;
+              congrate.textContent = greeting;
+            });
+    </script>
+    
+
+
+
+
+
+  </body>
+</html>
